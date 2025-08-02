@@ -14,6 +14,7 @@ if (!process.env.MONGODB_URI) {
 }
 
 
+app.use(express.json())
 app.use("/api/auth",authRoutes)
 
 connectDB().then(()=>{ 
